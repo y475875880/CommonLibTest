@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--线（进度条）宽度-->
+    <attr name="public_lineHeight" format="dimension" />
+    <!--字的大小 100元-->
+    <attr name="public_textSize" format="dimension" />
+    <!--字的颜色 100元-->
+    <attr name="public_textColor" format="color" />
+    <!--两个游标内部 线（进度条）的颜色-->
+    <attr name="public_inColor" format="color" />
+    <!--两个游标外部 线（进度条）的颜色-->
+    <attr name="public_outColor" format="color" />
+    <!--左边图标的图片-->
+    <attr name="public_imageLow" format="reference" />
+    <!--右边图标 的图片-->
+    <attr name="public_imageBig" format="reference" />
+    <!--游标 图片宽度-->
+    <attr name="public_imagewidth" format="dimension" />
+    <!--游标 图片高度-->
+    <attr name="public_imageheight" format="dimension" />
+    <!--是否有刻度线-->
+    <attr name="public_hasRule" format="boolean" />
+    <!--刻度的颜色-->
+    <attr name="public_ruleColor" format="color" />
+    <!--刻度上边的字 的颜色-->
+    <attr name="public_ruleTextColor" format="color" />
+    <!--单位 元-->
+    <attr name="public_unit" format="string" />
+    <!--单位份数-->
+    <attr name="public_equal" format="integer" />
+    <!--刻度单位 $-->
+    <attr name="public_ruleUnit" format="string" />
+    <!--刻度上边文字的size-->
+    <attr name="public_ruleTextSize" format="dimension" />
+    <!--刻度线的高度-->
+    <attr name="public_ruleLineHeight" format="dimension" />
+    <!--选择器的最大值-->
+    <attr name="public_bigValue" format="integer" />
+    <!--选择器的最小值-->
+    <attr name="public_smallValue" format="integer" />
+    <declare-styleable name="public_DoubleSlideSeekBar">
+        <attr name="public_lineHeight" />
+        <attr name="public_textSize" />
+        <attr name="public_textColor" />
+        <attr name="public_inColor" />
+        <attr name="public_outColor" />
+        <attr name="public_imageLow" />
+        <attr name="public_imageBig" />
+        <attr name="public_imagewidth" />
+        <attr name="public_imageheight" />
+        <attr name="public_hasRule" />
+        <attr name="public_ruleColor" />
+        <attr name="public_ruleTextColor" />
+        <attr name="public_unit" />
+        <attr name="public_equal" />
+        <attr name="public_ruleUnit" />
+        <attr name="public_ruleTextSize" />
+        <attr name="public_ruleLineHeight" />
+        <attr name="public_bigValue" />
+        <attr name="public_smallValue" />
+    </declare-styleable>
+
+    <declare-styleable name="public_CircleTextProgressbar">
+        <attr name="public_in_circle_color" format="color" />
+    </declare-styleable>
+
+    <!-- 文字前带星号的TextView -->
+    <declare-styleable name="TextViewWithAsterisk">
+        <attr name="public_text" format="string" />
+        <attr name="public_size" format="float" />
+        <attr name="public_color" format="color" />
+    </declare-styleable>
+
+    <!-- 自定义带返回按钮的顶部标题栏 -->
+    <declare-styleable name="TitleBar">
+        <attr name="titleText" format="string" />
+        <attr name="showBackBtn" format="boolean" />
+        <attr name="showBottomLine" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar10dp">
+        <attr name="titleTextDp" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="public_TitleBar">
+        <attr name="public_text_title" format="string" />
+    </declare-styleable>
+
+</resources>

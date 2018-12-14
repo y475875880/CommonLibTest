@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/outerLayout">
+
+    <LinearLayout
+        android:id="@+id/screenBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/public_white"
+        android:divider="@drawable/public_linearlayout_divider"
+        android:showDividers="none">
+
+        <LinearLayout
+            android:id="@+id/optionsLayout1"
+            android:visibility="gone"
+            style="@style/public_customer_linearLayout_list_filter"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/option1"
+                android:textColor="#82817F"
+                style="@style/public_tv_14dp_2c" />
+
+            <ImageView
+                android:id="@+id/iv_option1"
+                style="@style/public_customer_filter_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionsLayout2"
+            android:visibility="gone"
+            style="@style/public_customer_linearLayout_list_filter"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/option2"
+                android:textColor="#82817F"
+                style="@style/public_tv_14dp_2c" />
+
+            <ImageView
+                android:id="@+id/iv_option2"
+                style="@style/public_customer_filter_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionsLayout3"
+            android:visibility="gone"
+            style="@style/public_customer_linearLayout_list_filter"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/option3"
+                android:textColor="#82817F"
+                style="@style/public_tv_14dp_2c" />
+
+            <ImageView
+                android:id="@+id/iv_option3"
+                style="@style/public_customer_filter_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionsLayout4"
+            android:visibility="gone"
+            style="@style/public_customer_linearLayout_list_filter"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/option4"
+                android:textColor="#82817F"
+                style="@style/public_tv_14dp_2c" />
+
+            <ImageView
+                android:id="@+id/iv_option4"
+                style="@style/public_customer_filter_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionsLayout5"
+            android:visibility="gone"
+            style="@style/public_customer_linearLayout_list_filter"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/option5"
+                android:textColor="#82817F"
+                style="@style/public_tv_14dp_2c" />
+
+            <ImageView
+                android:id="@+id/iv_option5"
+                style="@style/public_customer_filter_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionsLayout6"
+            android:visibility="gone"
+            style="@style/public_customer_linearLayout_list_filter"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/option6"
+                android:textColor="#82817F"
+                style="@style/public_tv_14dp_2c" />
+
+            <ImageView
+                android:id="@+id/iv_option6"
+                style="@style/public_customer_filter_arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/public_horizontal_dividing_line" />
+
+</LinearLayout>

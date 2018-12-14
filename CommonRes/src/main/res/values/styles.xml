@@ -1,0 +1,690 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="public_AppTheme" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/public_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>
+        <item name="colorAccent">@color/public_gray</item>
+        <item name="android:windowAnimationStyle">@style/public_Activity_Animation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--<item name="cpCancelTextSize">@dimen/cp_cancel_text_size</item>-->
+        <!--<item name="cpCancelTextColor">@color/cp_color_gray</item>-->
+
+        <!--<item name="cpClearTextIcon">@mipmap/cp_icon_clear_all</item>-->
+        <!--<item name="cpSearchTextSize">@dimen/cp_search_text_size</item>-->
+        <!--<item name="cpSearchTextColor">@color/cp_color_gray_dark</item>-->
+        <!--<item name="cpSearchHintText">@string/cp_search_hint_text</item>-->
+        <!--<item name="cpSearchHintTextColor">@color/cp_color_gray_light</item>-->
+        <!--<item name="cpSearchCursorDrawable">@color/cp_color_gray_dark</item>-->
+
+        <!--<item name="cpListItemHeight">@dimen/cp_list_item_height</item>-->
+        <!--<item name="cpListItemTextSize">@dimen/cp_list_item_text_size</item>-->
+        <!--<item name="cpListItemTextColor">@color/cp_color_gray_deep</item>-->
+
+        <!--<item name="cpEmptyIcon">@mipmap/cp_icon_empty</item>-->
+        <!--<item name="cpEmptyIconWidth">@dimen/cp_empty_icon_width</item>-->
+        <!--<item name="cpEmptyIconHeight">@dimen/cp_empty_icon_height</item>-->
+        <!--<item name="cpEmptyText">@string/cp_no_result</item>-->
+        <!--<item name="cpEmptyTextSize">@dimen/cp_empty_text_size</item>-->
+        <!--<item name="cpEmptyTextColor">@color/cp_color_gray_deep</item>-->
+
+        <!--<item name="cpGridItemBackground">@drawable/cp_grid_item_bg</item>-->
+        <!--<item name="cpGridItemSpace">@dimen/cp_grid_item_space</item>-->
+
+        <!--<item name="cpSectionHeight">@dimen/cp_section_height</item>-->
+        <!--<item name="cpSectionTextSize">@dimen/cp_section_text_size</item>-->
+        <!--<item name="cpSectionTextColor">@color/cp_color_gray</item>-->
+        <!--<item name="cpSectionBackground">@color/cp_color_section_bg</item>-->
+
+        <!--<item name="cpIndexBarTextSize">@dimen/cp_index_bar_text_size</item>-->
+        <!--<item name="cpIndexBarNormalTextColor">@color/cp_color_gray</item>-->
+        <!--<item name="cpIndexBarSelectedTextColor">@color/cp_color_gray_dark</item>-->
+
+        <!--<item name="cpOverlayWidth">@dimen/cp_overlay_width</item>-->
+        <!--<item name="cpOverlayHeight">@dimen/cp_overlay_height</item>-->
+        <!--<item name="cpOverlayTextSize">@dimen/cp_overlay_text_size</item>-->
+        <!--<item name="cpOverlayTextColor">@android:color/white</item>-->
+        <!--<item name="cpOverlayBackground">@drawable/cp_overlay_bg</item>-->
+    </style>
+
+    <style name="public_Activity_Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/public_translate_right_to_center
+        </item>
+        <item name="android:activityOpenExitAnimation">@anim/public_translate_center_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/public_translate_left_to_center
+        </item>
+        <item name="android:activityCloseExitAnimation">@anim/public_translate_center_to_right
+        </item>
+    </style>
+
+    <style name="public_dialog_inout_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/public_dialog_enter</item>
+        //进入时的动画
+        <item name="android:windowExitAnimation">@anim/public_dialog_exit</item>
+        //退出时的动画
+    </style>
+
+    <style name="public_dialog_progress" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="public_textview_title">
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">@dimen/public_title</item>
+    </style>
+
+    <style name="public_textview_title_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_textview_title_middle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_title_middle2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_color_gray</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_title_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_color_gray</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_house_tag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_color_gray</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_cardmenu_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="public_textview_tag_filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/public_circle_rect_filter_tag_unselect</item>
+        <item name="android:textColor">@color/public_gray_a4</item>
+        <item name="android:textSize">30px</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:padding">10px</item>
+    </style>
+
+    <style name="public_textview_one">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_two">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_three">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_four">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_five">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_six">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_seven">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+
+    <style name="public_textview_house_tag_one">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_yellow_0a</item>
+        <item name="android:textSize">@dimen/public_px_four</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@drawable/public_circle_rect_yellow</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">5px</item>
+        <item name="android:paddingRight">5px</item>
+    </style>
+
+    <style name="public_textview_house_tag_two">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_red_73</item>
+        <item name="android:textSize">@dimen/public_px_four</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@drawable/public_circle_rect_red</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">5px</item>
+        <item name="android:paddingRight">5px</item>
+    </style>
+
+    <style name="public_textview_house_tag_three">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_purple_73</item>
+        <item name="android:textSize">@dimen/public_px_four</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@drawable/public_circle_rect_purple</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">5px</item>
+        <item name="android:paddingRight">5px</item>
+    </style>
+
+    <style name="public_edittext_six">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/public_black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@color/public_lightyellow</item>
+    </style>
+    <!-- 列表筛选布局 -->
+    <style name="public_textview_list_filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_gray_7f</item>
+        <item name="android:textSize">@dimen/public_px_three</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_linearlayout_list_filter">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="public_textview_title_px_big_big_one">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+        <item name="android:textSize">@dimen/public_px_big_big_one</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_textview_title_px_big_one">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+        <item name="android:textSize">@dimen/public_px_big_one</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_textview_title_px_one">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+        <item name="android:textSize">@dimen/public_px_one</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_textview_title_px_two">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_gray_7f</item>
+        <item name="android:textSize">@dimen/public_px_two</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_textview_title_px_three">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_gray_7f</item>
+        <item name="android:textSize">@dimen/public_px_three</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_textview_title_px_four">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_gray_7f</item>
+        <item name="android:textSize">@dimen/public_px_four</item>
+        <item name="android:text">@string/public_demo_str</item>
+    </style>
+
+    <style name="public_buttom_submit">
+        <item name="android:layout_width">600px</item>
+        <item name="android:layout_height">80px</item>
+        <item name="android:textColor">@color/public_white</item>
+        <item name="android:background">@drawable/public_circle_rect_button_sure</item>
+        <item name="android:textSize">@dimen/public_px_big_one</item>
+        <item name="android:text">提交</item>
+    </style>
+
+    <style name="public_buttom_next">
+        <item name="android:layout_width">500px</item>
+        <item name="android:layout_height">80px</item>
+        <item name="android:textColor">@color/public_white</item>
+        <item name="android:background">@drawable/public_circle_rect_button_sure</item>
+        <item name="android:textSize">@dimen/public_px_big_one</item>
+        <item name="android:text">下一步</item>
+    </style>
+
+    <style name="public_buttom_last">
+        <item name="android:layout_width">500px</item>
+        <item name="android:layout_height">80px</item>
+        <item name="android:textColor">@color/public_gray_ca</item>
+        <item name="android:background">@drawable/public_circle_rect_button_cancel</item>
+        <item name="android:textSize">@dimen/public_px_big_one</item>
+        <item name="android:text">上一步</item>
+    </style>
+
+    <style name="public_line_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/public_gray_ca_trans</item>
+    </style>
+
+    <style name="public_edittext_title_px_two">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_gray_7f</item>
+        <item name="android:textSize">@dimen/public_px_two</item>
+        <item name="android:textColorHint">@color/public_gray_ca</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="public_edittext_area_title_px_two">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_gray_7f</item>
+        <item name="android:textSize">@dimen/public_px_two</item>
+        <item name="android:textColorHint">@color/public_gray_ca</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:background">@drawable/public_circle_rect_edittext</item>
+    </style>
+    <!-- 首页：二手精选、租房、主推楼盘 -->
+
+    <style name="public_textview_house_tag_dp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_yellow_0a</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@drawable/public_circle_rect_yellow</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="public_customer_linearLayout_list_filter">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
+    <!-- 以 dp 作尺寸单位的 TextView 样式 -->
+    <style name="public_tv_48dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">48dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_46dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">46dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_44dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">44dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_42dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">42dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_40dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_38dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">38dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_36dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">36dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_34dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">34dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_32dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_30dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_28dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_26dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">26dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_24dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_22dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_20dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_18dp_2b">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">#2B2B2B</item>
+    </style>
+
+    <style name="public_tv_18dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+        <item name="android:text">示例-18dp-#2c2c2c</item>
+    </style>
+
+    <style name="public_tv_16dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+        <item name="android:text">示例-16dp-#2c2c2c</item>
+    </style>
+
+    <style name="public_tv_16dp_a0">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/public_gray_a0</item>
+        <item name="android:text">示例-16dp-#a0a0a0</item>
+    </style>
+
+    <style name="public_tv_14dp_2b">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#2B2B2B</item>
+    </style>
+
+    <style name="public_tv_14dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_14dp_05">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#FF5B05</item>
+    </style>
+
+    <style name="public_tv_14dp_a0a0a0">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#A0A0A0</item>
+    </style>
+
+    <style name="public_tv_13dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/public_black_2c</item>
+    </style>
+
+    <style name="public_tv_13dp_a0">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/public_gray_a0</item>
+    </style>
+
+    <style name="public_tv_12dp_a1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#A1A1A1</item>
+    </style>
+
+    <style name="public_tv_12dp_2b">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#2B2B2B</item>
+    </style>
+
+    <style name="public_tv_12dp_2c">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#2C2C2C</item>
+    </style>
+
+    <style name="public_tv_12dp_a0">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#A0A0A0</item>
+    </style>
+
+    <style name="public_tv_12dp_05">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#FF5B05</item>
+    </style>
+
+    <style name="public_customer_filter_arrow">
+        <item name="android:layout_width">11dp</item>
+        <item name="android:layout_height">6dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:src">@drawable/split_gray</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_marginTop">0.5dp</item>
+    </style>
+
+    <style name="public_back_icon_dp">
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:src">@drawable/public_back_gray</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="public_back_icon_360dp">
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:src">@drawable/public_back_gray</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:scaleType">fitXY</item>
+
+    </style>
+
+    <style name="public_textview_house_tag_8dp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/public_red_05</item>
+        <item name="android:textSize">8dp</item>
+        <item name="android:text">@string/public_demo_str</item>
+        <item name="android:background">@drawable/public_circle_rect_red</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+    <style name="public_right_arrow">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/public_right_arrow</item>
+    </style>
+
+    <style name="public_plus_icon">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/public_image_add_plus</item>
+    </style>
+
+    <style name="public_BottomDialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- 筛选条件的箭头 -->
+    <style name="public_filter_arrow">
+        <item name="android:layout_width">22px</item>
+        <item name="android:layout_height">12px</item>
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:src">@drawable/public_split_gray</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <!-- 筛选条件的排序 -->
+    <style name="public_filter_sort_img">
+        <item name="android:layout_width">24px</item>
+        <item name="android:layout_height">30px</item>
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:src">@drawable/public_filter_sort_gray</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+</resources>

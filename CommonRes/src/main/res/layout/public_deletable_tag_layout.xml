@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    tools:layout_marginTop="100dp"
+    tools:layout_marginLeft="50dp">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:background="@drawable/public_circle_rect_box_grey">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#A0A0A0"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:text="测试测试测试测试"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxLength="7"
+            android:maxEms="6"
+            android:ellipsize="end" />
+
+        <ImageView
+            android:id="@+id/delete_button"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/public_icon_delete_grey_50_50" />
+
+    </RelativeLayout>
+
+</LinearLayout>
