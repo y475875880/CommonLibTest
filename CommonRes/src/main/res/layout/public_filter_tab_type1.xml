@@ -17,6 +17,6 @@
         android:layout_marginLeft="5dp"
         android:layout_gravity="center"
         android:id="@+id/iv_filter"
-        style="@style/public_filter_arrow" />
+        style="@style/filter_arrow" />
 
 </LinearLayout>

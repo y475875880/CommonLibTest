@@ -187,6 +187,22 @@ public class GlobalConfiguration implements ConfigModule {
                     }
                 });
 
+                //参数1:上下文，必须的参数，不能为空。
+                //参数2:【友盟+】 AppKey，非必须参数，如果Manifest文件中已配置AppKey，该参数可以传空，则使用Manifest中配置的AppKey，否则该参数必须传入。
+                //参数3:【友盟+】 Channel，非必须参数，如果Manifest文件中已配置Channel，该参数可以传空，则使用Manifest中配置的Channel，否则该参数必须传入，Channel命名请详见Channel渠道命名规范。
+                //参数4:设备类型，必须参数，传参数为UMConfigure.DEVICE_TYPE_PHONE则表示手机；传参数为UMConfigure.DEVICE_TYPE_BOX则表示盒子；默认为手机。
+                //参数5:Push推送业务的secret，需要集成Push功能时必须传入Push的secret，否则传空。
+                UMConfigure.init(application, "5b384e40f29d9829080002db",
+                        "", UMConfigure.DEVICE_TYPE_PHONE, "4857d18e29eda08c05eaea2491e77b27");
+
+                /**
+                 * 设置组件化的Log开关
+                 * 参数: boolean 默认为false，如需查看LOG设置为true
+                 */
+                if (BuildConfig.LOG_DEBUG) {
+                    UMConfigure.setLogEnabled(true);
+                }
+
                 //PlatformConfig.setSinaWeibo();
                 //PlatformConfig.setDing();
 

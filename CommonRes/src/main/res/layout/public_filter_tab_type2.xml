@@ -10,5 +10,5 @@
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/iv_filter"
-        style="@style/public_filter_sort_img" />
+        style="@style/filter_sort_img" />
 </LinearLayout>

@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="public_AppTheme" >
+    <style name="public_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/public_colorPrimary</item>
         <item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>
@@ -9,8 +9,7 @@
         <item name="android:windowAnimationStyle">@style/public_Activity_Animation</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
 
         <!--<item name="cpCancelTextSize">@dimen/cp_cancel_text_size</item>-->
         <!--<item name="cpCancelTextColor">@color/cp_color_gray</item>-->
@@ -669,9 +668,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:windowIsFloating">true</item>
     </style>
-
     <!-- 筛选条件的箭头 -->
-    <style name="public_filter_arrow">
+    <style name="filter_arrow">
         <item name="android:layout_width">22px</item>
         <item name="android:layout_height">12px</item>
         <item name="android:layout_marginLeft">10px</item>
@@ -679,12 +677,11 @@
         <item name="android:scaleType">fitXY</item>
     </style>
     <!-- 筛选条件的排序 -->
-    <style name="public_filter_sort_img">
+    <style name="filter_sort_img">
         <item name="android:layout_width">24px</item>
         <item name="android:layout_height">30px</item>
         <item name="android:layout_marginLeft">10px</item>
         <item name="android:src">@drawable/public_filter_sort_gray</item>
         <item name="android:scaleType">fitXY</item>
     </style>
-
 </resources>

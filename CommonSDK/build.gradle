@@ -1,8 +1,5 @@
 apply plugin: 'com.android.library'
-//JitPack Maven
-//apply plugin: 'com.github.dcendents.android-maven'
-//// Your Group
-//group='com.github.y475875880'
+
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
@@ -97,12 +94,10 @@ dependencies {
     api rootProject.ext.dependencies["timerPickerLimit"]
     api rootProject.ext.dependencies["SuperTextView"]
     api rootProject.ext.dependencies["circleindicator"]
-    api rootProject.ext.dependencies["paginate"]
-    api rootProject.ext.dependencies["lottie"]
     //    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
     //    api rootProject.ext.dependencies["compressor"]
-    api files('libs/libddshare.jar')
-    api files('libs/umeng-common-1.5.3.jar')
+    implementation files('libs/libddshare.jar')
+    implementation files('libs/umeng-common-1.5.3.jar')
     //    api rootProject.ext.dependencies["umeng-push-utdid"]
     api rootProject.ext.dependencies["umeng-push-sdk"]
     api rootProject.ext.dependencies["umeng-huawei-push-sdk"]
@@ -111,24 +106,22 @@ dependencies {
     api rootProject.ext.dependencies["rxbinding-v7"]
     api rootProject.ext.dependencies["rxbinding"]
     api rootProject.ext.dependencies["AdvancedWebView"]
-    api rootProject.ext.dependencies["ConstraintLayout"]
-    api files('libs/SecurityEnvSDK-release-1.1.0.jar')
-    api files('libs/umeng-share-core-6.9.2.jar')
-    api files('libs/umeng-share-Ding-6.9.2.jar')
-    api files('libs/umeng-share-sina-simplify-6.9.2.jar')
-    api files('libs/umeng-share-wechat-simplify-6.9.2.jar')
-    api files('libs/umeng-shareboard-widget-6.9.2.jar')
-    api files('libs/umeng-sharetool-6.9.2.jar')
+    implementation files('libs/SecurityEnvSDK-release-1.1.0.jar')
+    implementation files('libs/umeng-share-core-6.9.2.jar')
+    implementation files('libs/umeng-share-Ding-6.9.2.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.2.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.2.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.2.jar')
+    implementation files('libs/umeng-sharetool-6.9.2.jar')
     //    implementation files('libs/utdid4all-1.1.5.3_proguard.jar')
     //    api project(':RangeSeekBar')
     //下载的sdk
     api(rootProject.ext.dependencies["aria-sdk"]) {
         exclude group: 'com.android.support'
     }
-    api files('libs/pinyin4j-2.5.0.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
 //    api (name:'citypicker',ext:'aar')
 //    api project(":citypicker")
-//    api project(":imagepicker")
-//    api project(":ocr_ui")
+    api project(":imagepicker")
 //    api project(":SuperTextView")
 }
